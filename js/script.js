@@ -49,15 +49,17 @@
     function render(shows) {
         const showList = shows.map(list => {   
             return  `<div id="page">
-                    <div id="poster" class="group"><img id='movieImg' src="${list.image}"/></div>
-                    <div id="info">
+                    <div id="poster" class="group">
+                        <a href="#ex1" rel="modal:open">
+                            <img id='movieImg' src="${list.image}"/>
+                        </a>
+                    </div>
+                    <div id="ex1" class="modal">
+                        <img id='movieImg' src="${list.image}"/>
                         <p id="title" class="group">${list.title}</p>
-                        <p id="epiC" class="group">Episode Count:</p>
-                        <p id="epiN" class="group">${list.episodes}</p>
-                        <p id="type"class="group">Type:</p>
-                        <p id="mov" class="group">${list.type}</p>
-                        <p id="air" class="group">Still Airing:</p>
-                        <p id="run" class="group">${list.status}</p>
+                        <p id="epiC" class="group">Episode Count: ${list.episodes}</p>
+                        <p id="type"class="group">Type: ${list.type}</p>
+                        <p id="air" class="group">Still Airing: ${list.status}</p>
                         <p id="synopsis" class="group">Summary:</p>
                         <p id="sum" class="group">${list.synopsis}</p>
                     </div>
