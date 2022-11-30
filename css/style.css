@@ -1,3 +1,113 @@
+header{
+    height: 100px
+
+}    
 body{
     text-align: center;
+    background-color: rgba(73, 116, 126, 0.98);
+    filter: opacity(100px);
+}
+#showroom {
+    height: max-content;
+    overflow-y: auto;
+}
+section {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 25px 20px;
+    padding: 25px;
+}
+
+#page {
+background-color: rgba(252, 255,255, .7);
+box-shadow: 0px 0px 10px rgba(15, 15, 15, 0.61);
+border-radius: 10px;
+overflow: hidden;
+max-width: 300px;
+}
+
+#info {
+    max-width: auto;
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "title title"
+    "count number"
+    "type mov"
+    "air run"
+    "synopsis synopsis"
+    "sum sum";
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+
+.group {
+    display: flex;
+}
+
+#poster{
+    padding: 10px;
+    grid-area: poster;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+img {
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+#title{
+    grid-area: title;
+    justify-content: center;
+    font-size: medium;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#epiC{
+    grid-area: count;
+}
+
+#epiN{
+    grid-area: number;
+}
+#type{
+    grid-area: type;
+}
+
+#mov{
+    grid-area: mov;
+}
+
+#air{
+    grid-area: air;
+}
+
+#run{
+    grid-area: run;
+}
+
+#synopsis{
+    grid-area: synopsis;
+    justify-content: center;
+}
+
+#sum{
+    grid-area: sum;
+}
+
+#alt{
+    grid-area: alt;
+}
+
+#aTitle{
+    grid-area: atitle;
+}
+
+footer{
+    height: 200px;
 }
