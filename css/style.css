@@ -8,7 +8,7 @@ body{
     filter: opacity(100px);
 }
 #showroom {
-    height: 1000px;
+    height: 1500px;
     overflow-y: auto;
 }
 section {
@@ -29,7 +29,7 @@ overflow: hidden;
 max-width: 400px;
 }
 
-.modal {
+/* .modal {
     max-width: auto;
     display: grid;
     grid-template-columns: 100px 250px;
@@ -44,8 +44,7 @@ max-width: 400px;
     align-items: flex-start;
     justify-content: flex-start;
     text-align: center;
-    
-}
+} */
 
 .group {
     display: flex;
@@ -59,7 +58,7 @@ max-width: 400px;
 }
 
 img {
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
 }
 
 #title{
@@ -111,5 +110,5 @@ img {
 }
 
 footer{
-    height: 100px;
+    height: auto;
 }
