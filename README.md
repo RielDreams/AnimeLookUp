@@ -11,11 +11,11 @@
     css
 
 <!-- screen shots -->
-![Alt text](Screen%20Shot%202022-11-30%20at%2010.11.13%20PM.png)
-
 ![Alt text](Screen%20Shot%202022-11-30%20at%2010.12.14%20PM.png)
+
+![Alt text](Screen%20Shot%202022-11-30%20at%2010.11.13%20PM.png)
 
 
 <!-- Future Enhancements -->
-Add amine to a queue
-show random anime button
+    Add amine to a queue
+    show random anime button
