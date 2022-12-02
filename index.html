@@ -12,20 +12,30 @@
     <script defer src="js/script.js"></script>
 
 </head>
-
 <body>
     <header>
         <nav>
-            <form>
-                <input type="text" placeholder="Anime Only"/>
-                <input id="button" type="submit" value="Show me" />
-          </form>
+            <ul id="navlist">
+                <li>
+                    <form>
+                        <input id="textbox" type="text" placeholder="Anime Only"/>
+                        <input id="showMe" class="button" type="submit" value="Show me" />
+                    </form>
+                </li>
+                <li>
+                    <a id ="randomButton" href="#" rel="modal:open">
+                        <input id="random" class="button" type="button" value="Random" />
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
     <h1>AnimeWatch</h1>
-    <main id="showroom">
-        <div id="hidden"></div>
-        <section>
+    <main id="mainfloor">
+        <section id="hidden">
+
+        </section>
+        <section id="showroom">
 
         </section>
     </main>
