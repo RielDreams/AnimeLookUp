@@ -15,14 +15,15 @@ header, footer {
 }
 body{
     text-align: center;
-    background-color: rgba(73, 116, 126, 0.98);
+    background-color: rgba(82, 116, 123, 0.98);
     filter: opacity(100px);
 }
 
 #showroom {
-    height: 1000px;
+    height: 75rem;
     overflow-y: auto;
 }
+
 section {
     margin: auto;
     max-width: 90rem;
@@ -34,12 +35,27 @@ section {
 }
 
 #page {
-background-color: rgba(252, 255,255, .7);
-box-shadow: 0px 0px 15px 1px rgba(15, 15, 15, 0.61);
-border-radius: 25px;
-overflow: hidden;
-max-width: 500px;
-min-width: 260px;
+    background-color: rgba(252, 255,255, .7);
+    box-shadow: 0px 0px 15px 1px rgba(15, 15, 15, 0.5);
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 500px;
+    min-width: 260px;
+    }
+
+#page:hover {
+    background-color: rgba(252, 255,255, .7);
+    box-shadow: 0px 0px 15px 1px rgba(15, 15, 15, 1);
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 500px;
+    min-width: 260px;
+    zoom: 1.05;
+}
+
+#button {
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 1px rgba(15, 15, 15, 0.61);
 }
 
 .group {
@@ -72,4 +88,9 @@ img {
 footer{
     height: auto;
     justify-content: center;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
 }

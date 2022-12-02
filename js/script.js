@@ -27,10 +27,12 @@
     const $input = $('input[type="text"]');
     const $section = $('section')
 
+
 ///////////////
 //EVENT LISTENERS
 ///////////////
     $form.on('submit', getData)
+
 
 ///////////////
 //FUNCTIONS
@@ -38,23 +40,26 @@
     function getData(e){
         e.preventDefault();
         userinput = $input.val();
+        $input.val('');
         $.ajax({url: url+userinput, headers}).then(
             (data) => {
                 render(data.data)
-                console.log(data)
+                // console.log(data)
             }, (error) => {console.log("this isnt working", error)
         })
-    }
+    };
 
     function render(shows) {
-        const showList = shows.map(list => {   
-            return  `<div id="page">
+        const showList = shows.map((list, i) => {  
+                // console.log(list)
+                // console.log(`the index of ${list} is ${i}`) 
+                return  `<div id="page">
                     <div id="poster" class="group">
-                        <a href="#ex1" rel="modal:open">
+                        <a href="#ex${i}" rel="modal:open">
                             <img id='movieImg' src="${list.image}"/>
                         </a>
                     </div>
-                    <div id="ex1" class="modal">
+                    <div id="ex${i}" class="modal">
                         <img id='movieImg' src="${list.image}"/>
                         <p id="title" class="group">${list.title}</p>
                         <p id="epiC" class="group">Episode Count: ${list.episodes}</p>
@@ -63,7 +68,7 @@
                         <p id="synopsis" class="group">Summary:</p>
                         <p id="sum" class="group">${list.synopsis}</p>
                     </div>
-                    </div>`
+                    </div>`      
         });
         $section.html(showList)
         }
