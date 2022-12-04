@@ -5,7 +5,11 @@
 
 body {
     text-align: center;
-    background-color: rgba(82, 116, 123, 0.98);
+    background-color: rgba(32, 185, 216, 0.98);
+}
+
+p{
+    width: 300px;
 }
 
 header{
@@ -40,12 +44,37 @@ header, footer {
 }
 
 h1{
+    font-family: American Typewriter, serif;
+}
 
+h2 {
+    font-family: Apple Chancery, cursive;
+    font-weight: bolder;
 }
 
 #mainfloor {
     height: 75rem;
     overflow-y: auto;
+}
+
+#queue {
+    display: grid;
+    grid-template-columns: 50px auto;  
+}
+
+#queue>h2 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+}
+
+#DQueue {
+    display: flex;
+    width: auto;
+    overflow-x: auto;
+    height: fit-content;
+    object-fit: cover;
+    gap: 5px
 }
 
 #hidden {
@@ -68,18 +97,43 @@ h1{
     border-radius: 25px;
     overflow: hidden;
     max-width: 500px;
-    min-width: 260px;
-    }
+    min-width: 18rem;
+}
 
 #page:hover {
     box-shadow: 0px 0px 15px 1px rgba(15, 15, 15, 1);
     zoom: 1.05;
 }
 
-.group {
-    display: flex;
+#DQueue>#page {
+    height: auto;
+    margin: 15px;
 }
 
+#page>#poster>#remove {
+    width: 6rem;
+    color: rgba(26, 47, 47, 0.7);
+    border-radius: 10px;
+    margin: .4rem;
+}
+
+.buttons>.button {
+    color: rgb(63, 63, 63);
+}
+
+.group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 18rem;
+}
+
+#sum {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    padding-top: .25rem;
+    padding-bottom: 1rem;
+}
 #poster{
     padding: 10px;
     grid-area: poster;
@@ -94,20 +148,21 @@ img {
 #title{
     grid-area: title;
     justify-content: center;
-    font-size: medium;
+    font-size: large;
     font-style: italic;
     font-weight: bold;
+    padding: .5rem;
 }
 
 #synopsis{
     justify-content: center;
+    padding: 5px;
 }
 
 footer{
     height: auto;
     justify-content: center;
 }
-
 
 ::-webkit-scrollbar {
     display: none;
