@@ -58,9 +58,10 @@ h2 {
 }
 
 #queue {
-    display: grid;
+    display: none;
     grid-template-columns: 50px auto;  
 }
+
 
 #queue>h2 {
     writing-mode: vertical-rl;
@@ -75,10 +76,6 @@ h2 {
     height: fit-content;
     object-fit: cover;
     gap: 5px
-}
-
-#hidden {
-    display: none;
 }
 
 #showroom {

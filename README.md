@@ -18,5 +18,6 @@
 
 
 <!-- Future Enhancements -->
-    Add amine to a queue
-    show random anime button
+update visual of website
+add, add button to front of modal
+link to source where anime can be watched
