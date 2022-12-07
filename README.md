@@ -16,11 +16,9 @@
 <!-- screen shots -->
 ![Alt text](Screenshots/Screen%20Shot%202022-12-07%20at%209.30.11%20AM.png)
 
-![Alt text](Screen%20Shot%202022-11-30%20at%2010.12.14%20PM.png)
+![Alt text](Screenshots/Screen%20Shot%202022-11-30%20at%2010.12.14%20PM.png)
 
-![Alt text](Screen%20Shot%202022-11-30%20at%2010.11.13%20PM.png)
-
-
+![Alt text](Screenshots/Screen%20Shot%202022-11-30%20at%2010.11.13%20PM.png)
 <!-- Future Enhancements -->
 update visual of website
 add, add button to front of modal
