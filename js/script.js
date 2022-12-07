@@ -15,7 +15,7 @@
     const $input = $('input[type="text"]');
     const $section = $('#showroom');
     const $random = $('#random');
-    const $hidden = $('#hidden');
+    const $hidden = $('#randompic');
     const $dq = $('#DQueue')
     const $quote = $('#quoteRoom')
     
@@ -40,7 +40,7 @@ const headers = {
 //         }
 //       };
 
-const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
+const url2 = 'https://animechan.vercel.app/api/quotes'
     
   
 ///////////////
@@ -88,6 +88,8 @@ const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
             (data) => {
                 render(data.data)
                 console.log(data)
+                $('#quoteRoom').css("display", "none")
+                $('#randompic').css("display", "none")
             }, (error) => {console.log("this isnt working", error)
         })
     };
@@ -128,7 +130,12 @@ const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
     }
     function randomDat(view){
             const randomEn = view.map((list) => {
-                return  `
+                return  `<div id="page" class="slides .fade">
+                <div id="poster" class="group">
+                    <a href="#ex${list.ranking}" rel="modal:open">
+                        <img id='movieImg' src="${list.image}"/>
+                    </a>
+                </div>
                 <div id="ex${list.ranking}" class="modal">
                     <img id='movieImg' src="${list.image}"/>
                     <p id="title" class="group">${list.title}</p>
@@ -215,10 +222,12 @@ const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
     if($dq[0].childElementCount !== 0){
         $('#queue').css("display", "grid")
         $('#quoteRoom').css("display", "none")
+        $('#randompic').css("display", "none")
         // console.log('showingQue is wokring')
     }else {
         $('#queue').css("display", "none")
         $('#quoteRoom').css("display", "flex")
+        $('#randompic').css("display", "flex")
     }
     }
 
@@ -226,7 +235,7 @@ const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
     //slideShow
     ///////////////
 
-    function showSlides() {
+    function quoteSlides() {
         let i;
         let slides = $(".mySlides");
         for (i = 0; i < slides.length; i++) {
@@ -235,10 +244,23 @@ const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
         idx++;
         if (idx > slides.length) {idx = 1} 
         slides[idx-1].style.display = "block";
-        setTimeout(showSlides, 5000); // Change image every 2 seconds
+        setTimeout(quoteSlides, 5000);
+      }
+
+    function pictureSlides() {
+        let i;
+        let slides = $(".slides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; 
+        }
+        idx++;
+        if (idx > slides.length) {idx = 1} 
+        slides[idx-1].style.display = "block";
+        setTimeout(pictureSlides, 5000);
       }
 
 
 showHideQue();
-setTimeout(randomData, 2000);
-setTimeout((showSlides), 2000);
+randomData()
+setTimeout((quoteSlides), 2000);
+setTimeout((pictureSlides), 3000);

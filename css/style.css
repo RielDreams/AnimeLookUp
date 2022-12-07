@@ -33,7 +33,7 @@
     justify-content: space-evenly;
     gap: 20px 10px;
     padding: 25px;
-    height: 100rem;
+    height: 23rem;
 }
 
 #quotes {
@@ -55,6 +55,7 @@
 body {
     text-align: center;
     background-color: rgba(32, 185, 216, 0.98);
+    background: linear-gradient( rgba(32, 185, 216, 0.98), 30%, transparent 55%)
 }
 
 p{
@@ -100,10 +101,12 @@ h2 {
     font-family: Apple Chancery, cursive;
     font-weight: bolder;
 }
+/* pages */
 
 #mainfloor {
     height: 75rem;
     overflow-y: auto;
+    align-content: center;
 }
 
 #queue {
@@ -146,6 +149,16 @@ h2 {
     min-width: 18rem;
 }
 
+#randompic {
+    margin: .15rem;
+    padding: 1.5rem;
+    justify-content: center;
+    height: 30rem;
+    align-items: center;
+    transform: scale(1); 
+    height: fit-content;
+}
+
 #page:hover {
     box-shadow: 0px 0px 15px 1px rgba(15, 15, 15, 1);
     zoom: 1.05;
@@ -163,6 +176,7 @@ h2 {
     margin: .4rem;
 }
 
+/* inside pages */
 .buttons>.button {
     color: rgb(63, 63, 63);
 }
@@ -210,6 +224,7 @@ footer{
     justify-content: center;
 }
 
+/* full webkit */
 ::-webkit-scrollbar {
     display: none;
 }
