@@ -203,6 +203,7 @@ const url2 = 'https://animechan.vercel.app/api/quotes'
             };
             innerRemove()
         };
+        $('#quoteRoom').css("display", "none")
     }
 
 
