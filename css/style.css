@@ -3,6 +3,55 @@
     box-sizing: border-box;
 }
 
+/* SlideShowCode */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* qoute section */
+#quoteRoom {
+    margin: auto;
+    max-width: 90rem;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px 10px;
+    padding: 25px;
+    height: 100rem;
+}
+
+#quotes {
+    display: flex;
+    background-color: rgba(252, 255,255, .7);
+    box-shadow: 0px 0px 15px 1px rgba(15, 15, 15, 0.5);
+    border-radius: 25px;
+    overflow: hidden;
+    width: 46rem;
+    height: fit-content;
+}
+#qoute {
+    max-width: 45rem;
+}
+#character {
+    align-content: flex-end;
+}
+/* general body parts */
 body {
     text-align: center;
     background-color: rgba(32, 185, 216, 0.98);

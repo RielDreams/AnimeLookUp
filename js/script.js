@@ -7,6 +7,7 @@
 //ELEMENTS
 ///////////////
     let limit = 500;
+    let idx = 0
     const $body = $('body')
     const $poster = $('#poster');
     const $title = $('#title');
@@ -21,6 +22,8 @@
     const $random = $('#random');
     const $hidden = $('#hidden');
     const $dq = $('#DQueue')
+    const $quote = $('#quoteRoom')
+    
 
 ///////////////
 //VARIABLES
@@ -33,6 +36,18 @@ const headers = {
     }
 
 
+// const options = {
+//         method: 'GET',
+//         url: 'https://anime-quotes1.p.rapidapi.com/api/random',
+//         headers: {
+//           'X-RapidAPI-Key': '80d0039c26mshef3d1e749d687d2p150054jsnfed47181c459',
+//           'X-RapidAPI-Host': 'anime-quotes1.p.rapidapi.com'
+//         }
+//       };
+
+const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
+    
+  
 ///////////////
 //EVENT LISTENERS
 ///////////////
@@ -44,6 +59,28 @@ const headers = {
 ///////////////
 //FUNCTIONS
 ///////////////
+    function getAnimeQoute(){
+        $.ajax(url2).then(
+            (data) => {
+                console.log(data)
+                print(data)
+            }, (error) => {console.log("this isnt working", error)
+        })
+    }
+
+    function print(quote){
+        const quotes = quote.map((q)=> {
+            return `<div id="quotes" class="mySlides fade">
+                <h1 id="qoute">${q.quote}</h1>
+                <p id="character"> -${q.character}</p>
+                </div>`
+        });
+            console.log(quotes)
+            $quote.html(quotes)
+    };
+    
+
+    getAnimeQoute()
 
     ///////////////
     //search bar function
@@ -60,7 +97,7 @@ const headers = {
         })
     };
     function render(shows) {
-        const showList = shows.map((list, i) => {  
+        const showList = shows.map((list) => {  
             return  `<div id="page">
                         <div id="poster" class="group">
                             <a href="#ex${list.ranking}" rel="modal:open">
@@ -172,7 +209,7 @@ const headers = {
             </div>
             </div>`
         );
-        console.log(`key ${key} . value ${localStorage[key]}`)
+        // console.log(`key ${key} . value ${localStorage[key]}`)
         }
     }
 
@@ -182,13 +219,32 @@ const headers = {
     function showHideQue(){
     if($dq[0].childElementCount !== 0){
         $('#queue').css("display", "grid")
+        $('#quoteRoom').css("display", "none")
         // console.log('showingQue is wokring')
     }else {
         $('#queue').css("display", "none")
+        $('#quoteRoom').css("display", "flex")
     }
     }
 
+    ///////////////
+    //slideShow
+    ///////////////
 
-showHideQue()
-randomData()
+    function showSlides() {
+        let i;
+        let slides = $(".mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; 
+        }
+        idx++;
+        if (idx > slides.length) {idx = 1} 
+        slides[idx-1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+
+
+showHideQue();
+setTimeout(randomData, 2000);
+setTimeout((showSlides), 2000);
 // }
