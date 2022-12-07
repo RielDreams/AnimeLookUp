@@ -1,8 +1,3 @@
-////////////
-//iife
-///////////
-// $(function(){ 
-
 ///////////////
 //ELEMENTS
 ///////////////
@@ -247,4 +242,3 @@ const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
 showHideQue();
 setTimeout(randomData, 2000);
 setTimeout((showSlides), 2000);
-// }
