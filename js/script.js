@@ -107,7 +107,7 @@ const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
                     <p id="air" class="group">Still Airing:   ${list.status}</p>
                     <p id="synopsis" class="group">Summary:</p>
                     <p id="sum" class="group">${list.synopsis}</p>
-                    <a href="#close-modal" rel="modal:close">
+                    <a href="#close-modal" rel="modal:close" class="buttons">
                         <input id="add" class="button" type="button" value="Add" />
                         <input id="remove" class="button" type="button" value="Remove" />
                     </a>
@@ -137,7 +137,7 @@ const url2 = 'https://animechan.vercel.app/api/quotes/anime?title=naruto'
                     <p id="air" class="group">Still Airing:   ${list.status}</p>
                     <p id="synopsis" class="group">Summary:</p>
                     <p id="sum" class="group">${list.synopsis}</p>
-                    <a href="#close-modal" rel="modal:close">
+                    <a href="#close-modal" rel="modal:close" class="buttons">
                         <input id="add" class="button" type="button" value="Add" />
                         <input id="remove" class="button" type="button" value="Remove" />
                     </a>
