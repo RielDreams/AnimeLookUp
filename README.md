@@ -24,3 +24,4 @@ update visual of website
 add, add button to front of modal
 link to source where anime can be watched
 pull directly from api with modal, instead of stored information
+turn imagine slide into a more 3d carousel

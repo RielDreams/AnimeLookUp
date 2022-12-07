@@ -18,7 +18,11 @@
     const $hidden = $('#randompic');
     const $dq = $('#DQueue')
     const $quote = $('#quoteRoom')
-    
+    const $page = $('#page')
+    const $carousel = $('carousel')
+    var width, height, totalWidth, margin = 20,
+        currIndex = 0,
+        interval, intervalTime = 4000; 
 
 ///////////////
 //VARIABLES
@@ -259,7 +263,10 @@ const url2 = 'https://animechan.vercel.app/api/quotes'
         setTimeout(pictureSlides, 5000);
       }
 
-
+    ///////////////
+    //carsousel
+    ///////////////
+    
 showHideQue();
 randomData()
 setTimeout((quoteSlides), 2000);
