@@ -231,6 +231,7 @@ const url2 = 'https://animechan.vercel.app/api/quotes'
     }else {
         $('#queue').css("display", "none")
         $('#quoteRoom').css("display", "flex")
+        $('#quoteRoom').css("height", "20rem")
         $('#randompic').css("display", "flex")
     }
     }
@@ -266,7 +267,7 @@ const url2 = 'https://animechan.vercel.app/api/quotes'
     ///////////////
     //carsousel
     ///////////////
-    
+
 showHideQue();
 randomData()
 setTimeout((quoteSlides), 2000);
