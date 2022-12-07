@@ -253,15 +253,17 @@ const url2 = 'https://animechan.vercel.app/api/quotes'
       }
 
     function pictureSlides() {
-        let i;
-        let slides = $(".slides");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; 
-        }
-        idx++;
-        if (idx > slides.length) {idx = 1} 
-        slides[idx-1].style.display = "block";
-        setTimeout(pictureSlides, 5000);
+            let i;
+            let slides = $(".slides");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; };
+            idx++;
+            if (idx > slides.length) {idx = 1} 
+            slides[idx+2].style.display = "block";
+            slides[idx+3].style.display = "block";
+            slides[idx].style.display = "block";
+            slides[idx+1].style.display = "block";
+            setTimeout(pictureSlides, 5000);
       }
 
     ///////////////

@@ -152,11 +152,17 @@ h2 {
 #randompic {
     margin: .15rem;
     padding: 1.5rem;
-    justify-content: center;
     height: 30rem;
     align-items: center;
     transform: scale(1); 
     height: fit-content;
+    margin: auto;
+    max-width: 90rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px 10px;
+    padding: 25px;
 }
 
 #page:hover {
